@@ -1,0 +1,11 @@
+apiVersion: api.myrealtrip.net/v1alpha1
+kind: Scaler
+metadata:
+  name: scaler-sample
+spec:
+  start: 2 # AM UTC
+  end: 12 # AM UTC
+  replicas: 5
+  deployments:
+    - name: nginx
+      namespace: default
